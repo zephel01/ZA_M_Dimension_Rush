@@ -1,0 +1,14 @@
+{
+  "move_mode": 3,
+  "max_loop": 9999,
+  "wait_time": 0.2,
+  "elevator_move_time": 2.5,
+  "use_dash": true,
+  "duration": 3.2,
+  "dash_delay": 0.05,
+  "shuttle_turn_wait": 0.5,
+  "fastpass_wait": 2.2,
+  "fastpass_first_y": false,
+  "show_settings_ui": true,
+  "settings_ui_timeout_seconds": 60
+}
