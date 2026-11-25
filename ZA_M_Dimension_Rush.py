@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-ZA M次元ラッシュ v3.2
+ZA M次元ラッシュ v3.3.0
+・コマンド一覧の表示名を「ZA M次元ラッシュ v3.3.0」に変更（ほかの ZA スクリプトと同じ形式）、版番号を 3 桁に (v3.3.0)
 ・開始前の設定画面を追加（Start を押すとモードと数値を選べる。config.json に保存可能）(v3.2)
 ・設定を config.json に外部化。モードごとの数値は別々に保存され、モードを切り替えても消えない (v3.2)
 ・Type1 の上下移動時間、Type3 の折り返し待機、ループ回数を設定できるように変更 (v3.2)
@@ -15,7 +16,7 @@ from Commands.PythonCommandBase import PythonCommand, ImageProcPythonCommand
 from Commands.Keys import KeyPress, Hat, Button, Direction, Stick
 
 # 【バージョン】NAME（クラス内）と両方を書き換えること
-VERSION = '3.2'
+VERSION = '3.3.0'
 
 # 【設定ファイル】このスクリプトと同じフォルダの config.json を読む
 CONFIG_FILE = 'config.json'
@@ -145,7 +146,7 @@ class ZA_MDimensionRush(ImageProcPythonCommand):
     # PCME 0.2.0 以降は NAME をソースから構文解析だけで読む（実行しない）。
     # f 文字列や変数を使うとコマンド一覧に出なくなるので、必ず文字列リテラルで書く。
     # バージョンを上げるときは、上の VERSION とこの NAME の両方を書き換えること。
-    NAME = 'ZA_M_Dimension_Rush_v3.2'
+    NAME = "ZA M次元ラッシュ v3.3.0"
 
     def __init__(self, camera, gui=None):
         # PCME 0.2.0: 第2引数にプレビュー（CaptureArea）が渡される。設定画面の親ウィンドウに使う
@@ -676,5 +677,5 @@ class _SettingsDialog:
 
 
 # NAME（文字列リテラル）と VERSION の書き忘れに気づけるようにする
-if ZA_MDimensionRush.NAME != f"ZA_M_Dimension_Rush_v{VERSION}":
+if ZA_MDimensionRush.NAME != f"ZA M次元ラッシュ v{VERSION}":
     print(f"[Warning] NAME ({ZA_MDimensionRush.NAME}) と VERSION ({VERSION}) が合っていません。両方を同じ版に書き換えてください。")
